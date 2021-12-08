@@ -47,6 +47,7 @@ abstract class AbstractQueryBusDecorator implements QueryBusDecorator
     /**
      * @param Query $query
      * @return Query
+     * @infection-ignore-all
      */
     protected function preDispatch(Query $query): Query
     {
@@ -58,6 +59,7 @@ abstract class AbstractQueryBusDecorator implements QueryBusDecorator
      * @param ViewModel $viewModel
      * @return ViewModel
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @infection-ignore-all
      */
     protected function postDispatch(Query $query, ViewModel $viewModel): ViewModel
     {
