@@ -14,7 +14,7 @@
         "php": ">=8.0",
         "psr/log": "*",
         "psr/container": "*",
-        "jeckel-lab/contract": "dev-feature/query-bus"
+        "jeckel-lab/contract": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
