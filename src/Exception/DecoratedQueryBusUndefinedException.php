@@ -9,15 +9,16 @@ declare(strict_types=1);
 
 namespace JeckelLab\QueryDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\LogicException;
-use JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception\QueryBusException;
+use JeckelLab\Contract\Core\QueryDispatcher\Exception\QueryDispatcherException;
+use LogicException;
 
 /**
  * Class DecoratedQueryBusUndefinedException
  * @package JeckelLab\QueryDispatcher\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
-class DecoratedQueryBusUndefinedException extends LogicException implements QueryBusException
+class DecoratedQueryBusUndefinedException extends LogicException implements QueryDispatcherException
 {
     public function __construct()
     {

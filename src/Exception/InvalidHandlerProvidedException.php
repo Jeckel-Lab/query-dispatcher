@@ -9,16 +9,17 @@ declare(strict_types=1);
 
 namespace JeckelLab\QueryDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\RuntimeException;
-use JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception\QueryBusException;
+use JeckelLab\Contract\Core\QueryDispatcher\Exception\QueryDispatcherException;
 use JeckelLab\Contract\Core\QueryDispatcher\QueryHandler\QueryHandler;
+use RuntimeException;
 
 /**
  * Class InvalidHandlerProvidedException
  * @package JeckelLab\QueryDispatcher\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
-class InvalidHandlerProvidedException extends RuntimeException implements QueryBusException
+class InvalidHandlerProvidedException extends RuntimeException implements QueryDispatcherException
 {
     /**
      * @param mixed $handlerClassName

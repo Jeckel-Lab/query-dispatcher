@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace JeckelLab\QueryDispatcher\Resolver;
 
+use JeckelLab\Contract\Core\QueryDispatcher\Exception\NoHandlerDefinedForQueryException;
 use JeckelLab\Contract\Core\QueryDispatcher\Query\Query;
-use JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception\NoHandlerDefinedForQueryException;
 use JeckelLab\Contract\Core\QueryDispatcher\QueryHandler\QueryHandler;
 use JeckelLab\QueryDispatcher\Exception\HandlerNotFoundException;
 use JeckelLab\QueryDispatcher\Exception\InvalidHandlerProvidedException;

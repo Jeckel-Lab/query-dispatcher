@@ -9,15 +9,16 @@ declare(strict_types=1);
 
 namespace JeckelLab\QueryDispatcher\Exception;
 
-use JeckelLab\Contract\Core\Exception\RuntimeException;
-use JeckelLab\Contract\Core\QueryDispatcher\QueryBus\Exception\QueryBusException;
+use JeckelLab\Contract\Core\QueryDispatcher\Exception\QueryDispatcherException;
+use RuntimeException;
 
 /**
  * Class HandlerNotFoundException
  * @package JeckelLab\QueryDispatcher\Exception
  * @psalm-immutable
+ * @psalm-suppress MutableDependency
  */
-class HandlerNotFoundException extends RuntimeException implements QueryBusException
+class HandlerNotFoundException extends RuntimeException implements QueryDispatcherException
 {
     public function __construct(string $handlerName, string $queryName, \Throwable $exception)
     {
